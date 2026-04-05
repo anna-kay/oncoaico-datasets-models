@@ -49,9 +49,17 @@ To address these limitations, custom datasets were constructed:
 | | Mixed Dataset | 5474 | 858 | 1795 | 8127 |
 <br>
 
-Datasets Structure in this project:
+## 3. Models
+Models used in this repo:
+1. **CaraNet**, [paper](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12032/120320D/CaraNet--context-axial-reverse-attention-network-for-segmentation-of/10.1117/12.2611802.short), [github](https://github.com/AngeLouCN/CaraNet)
+2. **Polyp-PVT**, [paper](https://arxiv.org/abs/2108.06932), [github](https://github.com/dengpingfan/polyp-pvt)
+3. **MSRF-Net**, [paper](https://ieeexplore.ieee.org/abstract/document/9662196/), [github](https://github.com/NoviceMAn-prog/MSRF-Net)
+
+
+## 4. Project Structure
 ```
-|- SEGMENTATION_DATASET/
+|- data/
+|- - SEGMENTATION_DATASET/
 |- - train/
 |- - - images/
 |- - - masks/
@@ -74,9 +82,7 @@ Datasets Structure in this project:
 |- - - all_testsets/
 |- - - - images/
 |- - - - masks/
-```
-```
-|- MIXED_DATASET/
+|- - MIXED_DATASET/
 |- - train/
 |- - - images/
 |- - - masks/
@@ -93,36 +99,46 @@ Datasets Structure in this project:
 |- - - mixed_testsets/
 |- - - - images/
 |- - - - masks/
-```
-
-## 3. Models
-Models used in this repo:
-1. **CaraNet**, [paper](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12032/120320D/CaraNet--context-axial-reverse-attention-network-for-segmentation-of/10.1117/12.2611802.short), [github](https://github.com/AngeLouCN/CaraNet)
-2. **Polyp-PVT**, [paper](https://arxiv.org/abs/2108.06932), [github](https://github.com/dengpingfan/polyp-pvt)
-3. **MSRF-Net**, [paper](https://ieeexplore.ieee.org/abstract/document/9662196/), [github](https://github.com/NoviceMAn-prog/MSRF-Net)
-
-
-## 4. Project Structure
-```
+|- models/
+|- - CaraNet/
+|- - - 
+|- - Polyp-PVT/
+|- - -
+|- - MSRF-Net/
+|- - -
 |- training/
-|- -
+|- - TODO: add info
 |- evaluation/
-|- - run_inference_test_datasets.py
-|- - eval_test_datasets.py
+|- - evaluate_predictions.py
+|- - run_eval.py
+|- inference/
+|- - generate_predictions.py
 ```
 
 ## 5. How to run
-
-Lorem Ipsum
+Example of running inference on real-world predictions
+```
+python generate_predictions.py \
+    --new_data ... \ TODO: Review
+    --model polyp_pvt
+```
 
 Example of running evaluation of the test sets for the MIXED_DATASET:
 
 ```
-python eval_test_datasets.py \
-    --pred_base ./inference_results \
+python run_eval.py \
+    --pred_base ./inference_test_datasets \ TODO: Review
     --gt_base ./MIXED_DATASET/test \
     --datasets negatives positives mixed_testsets
+    --model polyp_pvt
 ```
+Logic:
+
+**inference/generate_predictions.py:** 1)loads model & data, 2)generates predictions (Can be used just for inference)
+
+**evaluation/evaluate_predictions.py:** 1)loads predictions & labels, 2)calculates metrics
+
+**run_eval.py:** 1)loads test set, 2)calls generate_predictions, 3) calls evaluate_predictions, 3) prints metrics
 
 ## 6. Acknowledgement
 This repo relies on the works CaraNet, Polpy-PVT, MSRF-Net
