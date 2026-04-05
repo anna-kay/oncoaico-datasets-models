@@ -109,12 +109,20 @@ Models used in this repo:
 |- evaluation/
 |- - run_inference_test_datasets.py
 |- - eval_test_datasets.py
-
 ```
 
 ## 5. How to run
 
 Lorem Ipsum
+
+Example of running evaluation of the test sets for the MIXED_DATASET:
+
+```
+python eval_test_datasets.py \
+    --pred_base ./inference_results \
+    --gt_base ./MIXED_DATASET/test \
+    --datasets negatives positives mixed_testsets
+```
 
 ## 6. Acknowledgement
 This repo relies on the works CaraNet, Polpy-PVT, MSRF-Net
