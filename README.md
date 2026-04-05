@@ -50,7 +50,7 @@ To address these limitations, custom datasets were constructed:
 <br>
 
 Datasets Structure in this project:
-
+```
 |- SEGMENTATION_DATASET/
 |- - train/
 |- - - images/
@@ -74,7 +74,8 @@ Datasets Structure in this project:
 |- - - all_testsets/
 |- - - - images/
 |- - - - masks/
-
+```
+```
 |- MIXED_DATASET/
 |- - train/
 |- - - images/
@@ -92,6 +93,7 @@ Datasets Structure in this project:
 |- - - mixed_testsets/
 |- - - - images/
 |- - - - masks/
+```
 
 ## 3. Models
 Models used in this repo:
