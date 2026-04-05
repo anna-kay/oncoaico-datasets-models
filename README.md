@@ -49,6 +49,10 @@ To address these limitations, custom datasets were constructed:
 | | Mixed Dataset | 5474 | 858 | 1795 | 8127 |
 <br>
 
+**Comments/Limitations:**
+
+Lorem ipsum
+
 ## 3. Models
 Models used in this repo:
 1. **CaraNet**, [paper](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12032/120320D/CaraNet--context-axial-reverse-attention-network-for-segmentation-of/10.1117/12.2611802.short), [github](https://github.com/AngeLouCN/CaraNet)
@@ -101,13 +105,18 @@ Models used in this repo:
 |- - - - masks/
 |- models/
 |- - CaraNet/
-|- - - 
+|- - - TODO
 |- - Polyp-PVT/
-|- - -
+|- - - TODO
 |- - MSRF-Net/
-|- - -
+|- - - TODO
 |- training/
-|- - TODO: add info
+|- - train.py
+|- - utils/
+|- - - dataloader.py
+|- - - format_conversion.py
+|- - - utils.py
+|- - lib/ 
 |- evaluation/
 |- - evaluate_predictions.py
 |- - run_eval.py
@@ -116,15 +125,15 @@ Models used in this repo:
 ```
 
 ## 5. How to run
-Example of running inference on real-world predictions
+**1. To train using train & val splits of the MIXED_DATASET:**
 ```
-python generate_predictions.py \
-    --new_data ... \ TODO: Review
-    --model polyp_pvt
+python training/train.py \
+    --dataset TODO \
+    --model TODO \
+    --
 ```
 
-Example of running evaluation of the test sets for the MIXED_DATASET:
-
+**2. To run evaluation of the test sets for the MIXED_DATASET:**
 ```
 python run_eval.py \
     --pred_base ./inference_test_datasets \ TODO: Review
@@ -140,10 +149,16 @@ Logic:
 
 **run_eval.py:** 1)loads test set, 2)calls generate_predictions, 3) calls evaluate_predictions, 3) prints metrics
 
-## 6. Acknowledgement
-This repo relies on the works CaraNet, Polpy-PVT, MSRF-Net
+**3. To run inference on real-world predictions:**
+```
+python generate_predictions.py \
+    --new_data ... \ TODO: Review
+    --model polyp_pvt
+```
 
-## 7. Context
+## 6. Acknowledgement
+
+This repo relies on the works CaraNet, Polpy-PVT, MSRF-Net
 
 This work is related to ONCO-AICO is an AI-assisted training platform for junior endoscopists to improve polyp detection skills. The platform utilizes annotated colonoscopy videos, along with explainable AI (xAI) feedback and performance scoring.
 
