@@ -36,7 +36,7 @@ To address these limitations, custom datasets were constructed:
 | CVC-ColonDB | - | - | 380 | |
 | ETIS-LaribPolypDB | - | -| 196 | |
 | PolypGen | 1122 | 289 | 342 |
-| Segmentation Dataset | 2622 | 451 | - 978 | |
+| Segmentation Dataset | 2622 | 451 | 978 | |
 <br>
 
 <br>
