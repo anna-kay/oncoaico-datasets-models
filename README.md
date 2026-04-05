@@ -49,6 +49,49 @@ To address these limitations, custom datasets were constructed:
 | | Mixed Dataset | 5474 | 858 | 1795 | 8127 |
 <br>
 
+Datasets Structure in this project:
+
+|- SEGMENTATION_DATASET/
+|- - train/
+|- - - images/
+|- - - masks/
+|- - val/
+|- - - images/
+|- - - masks/
+|- - test/
+|- - - CVC-300/
+|- - - - images/
+|- - - - masks/
+|- - - CVC-ColonDB/
+|- - - - images/
+|- - - - masks/
+|- - - ETIS-LaribPolypDB/
+|- - - - images/
+|- - - - masks/
+|- - - PolypGen/
+|- - - - images/
+|- - - - masks/
+|- - - all_testsets/
+|- - - - images/
+|- - - - masks/
+
+|- MIXED_DATASET/
+|- - train/
+|- - - images/
+|- - - masks/
+|- - val/
+|- - - images/
+|- - - masks/
+|- - test/
+|- - - positives/
+|- - - - images/
+|- - - - masks/
+|- - - negatives/
+|- - - - images/
+|- - - - masks/
+|- - - mixed_testsets/
+|- - - - images/
+|- - - - masks/
 
 ## 3. Models
 Models used in this repo:
@@ -59,9 +102,11 @@ Models used in this repo:
 
 ## 4. Project Structure
 ```
-|-
-|-
-|-
+|- training/
+|- -
+|- evaluation/
+|- - run_inference_test_datasets.py
+|- - eval_test_datasets.py
 
 ```
 
