@@ -109,9 +109,9 @@ We are grateful for the foundation these works have provided.
 |- models/
 |- - CaraNet/
 |- - - TODO
-|- - Polyp-PVT/
+|- - PolypPVT/
 |- - - TODO
-|- - MSRF-Net/
+|- - MSRFNet/
 |- - - TODO
 |- training/
 |- - train.py
@@ -125,6 +125,10 @@ We are grateful for the foundation these works have provided.
 |- - run_eval.py
 |- inference/
 |- - generate_predictions.py
+|- outputs/
+|- - CaraNet/
+|- - PolypPVT/
+|- - MSRFNet/
 ```
 
 ## 5. How to run
