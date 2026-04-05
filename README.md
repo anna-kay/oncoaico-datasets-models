@@ -126,9 +126,10 @@ We are grateful for the foundation these works have provided.
 |- inference/
 |- - generate_predictions.py
 |- outputs/
-|- - CaraNet/
-|- - PolypPVT/
-|- - MSRFNet/
+|- - predictions/
+|- - - CaraNet/
+|- - - PolypPVT/
+|- - - MSRFNet/
 ```
 
 ## 5. How to run
