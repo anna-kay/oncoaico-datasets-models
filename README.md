@@ -54,11 +54,14 @@ To address these limitations, custom datasets were constructed:
 Lorem ipsum
 
 ## 3. Models
-Models used in this repo:
+
+This repository uses the following models:
+
 1. **CaraNet**, [paper](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12032/120320D/CaraNet--context-axial-reverse-attention-network-for-segmentation-of/10.1117/12.2611802.short), [github](https://github.com/AngeLouCN/CaraNet)
 2. **Polyp-PVT**, [paper](https://arxiv.org/abs/2108.06932), [github](https://github.com/dengpingfan/polyp-pvt)
 3. **MSRF-Net**, [paper](https://ieeexplore.ieee.org/abstract/document/9662196/), [github](https://github.com/NoviceMAn-prog/MSRF-Net)
 
+We are grateful for the foundation these works have provided.
 
 ## 4. Project Structure
 ```
@@ -157,8 +160,6 @@ python generate_predictions.py \
 ```
 
 ## 6. Acknowledgement
-
-This repo relies on the works CaraNet, Polpy-PVT, MSRF-Net
 
 This work is related to ONCO-AICO is an AI-assisted training platform for junior endoscopists to improve polyp detection skills. The platform utilizes annotated colonoscopy videos, along with explainable AI (xAI) feedback and performance scoring.
 
