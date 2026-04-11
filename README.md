@@ -15,7 +15,7 @@ This repository contains datasets, code, and experimental setups for machine lea
 | LDPolypVideo | - | x | x | CC BY 4.0 |
 | REAL-COLON | [paper](https://www.nature.com/articles/s41597-024-03359-0) | - | [link](https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866) | CC BY 4.0 |
 
-**How the datasets are used & Data processing:**
+**Dataset Use & Processing:**
 
 The development of ONCO-AICO faced several data-related challenges. Although multiple colonoscopy datasets are available, many lack segmentation annotations, while those that include them are often small, limiting deep learning performance. Most datasets also do not provide predefined train–validation–test splits, increasing the risk of data leakage and reducing experimental consistency. Additionally, data is typically sourced from a limited number of clinical environments, constraining model generalization.
 
