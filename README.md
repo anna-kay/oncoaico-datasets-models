@@ -170,4 +170,4 @@ This work is related to ONCO-AICO is an AI-assisted training platform for junior
 
 Note: This repo focuses solely on the underlying datasets and machine learning experiments.
 
-This work was conducted as part of the EU-funded ONCOSCREEN project (Horizon Europe grant agreement No. 101097036).
+This work was conducted as part of the EU-funded [ONCOSCREEN](https://oncoscreen.health/) project (Horizon Europe grant agreement No. 101097036).
