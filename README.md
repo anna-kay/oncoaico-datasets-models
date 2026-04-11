@@ -13,7 +13,7 @@ This repository contains datasets, code, and experimental setups for machine lea
 | Kvasir SEG (HyperKvasir)| Colonoscopy images | 1000 | [paper](https://www.nature.com/articles/s41597-020-00622-y) | [github](https://github.com/DebeshJha/Kvasir-SEG)| [link](https://datasets.simula.no/hyper-kvasir/) | Public for research; no clear license |
 | PolypGen | Colonoscopy images | x | [paper](https://www.nature.com/articles/s41597-023-01981-y) | [github](https://github.com/DebeshJha/PolypGen) | [link](https://www.synapse.org/Synapse:syn26376615/wiki/) | CC BY |
 | LDPolypVideo | Colonoscopy videos (.avi)| 103 videos in total; 42 positive videos (contain polyps) & 61 negative  | - | x | x | CC BY 4.0 |
-| REAL-COLON | Colonoscopy videos (broken down into frames)| Video recordings: 60 (15 recordings per clinical study), Total Frames: 2,757,723| [paper](https://www.nature.com/articles/s41597-024-03359-0) | - | [link](https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866) | CC BY 4.0 |
+| REAL-COLON | Colonoscopy videos (broken down into frames)| Video recordings: 60 (15 recordings per clinical study), Total Frames: 2,757,723| [paper](https://www.nature.com/articles/s41597-024-03359-0) | [github](https://github.com/cosmoimd/real-colon-dataset) | [link](https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866) | CC BY 4.0 |
 
 **Dataset Use & Processing:**
 
