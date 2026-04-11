@@ -4,14 +4,16 @@ This repository contains datasets, code, and experimental setups for machine lea
 ## 2. Data
 **Pre-existing datasets used in this repo:**
 
-1. CVC-300
-2. CVC-ColonDB
-3. CVC-ClinicDB
-4. ETIS-LaribPolypDB
-5. Kvasir SEG (HyperKvasir), [paper](https://www.nature.com/articles/s41597-020-00622-y), [github](https://github.com/DebeshJha/Kvasir-SEG), [link](https://datasets.simula.no/hyper-kvasir/)
-6. PolypGen, [paper](https://www.nature.com/articles/s41597-023-01981-y), [github](https://github.com/DebeshJha/PolypGen), [link](https://www.synapse.org/Synapse:syn26376615/wiki/)
-7. LDPolypVideo, [paper](), [link]()
-8. REAL-COLON, [paper](https://www.nature.com/articles/s41597-024-03359-0), [link](https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866)
+| Dataset | Paper | Github | Download link | License |
+| :------------: | :------------: | :------------: | :------------: | :------------: |
+| CVC-300 | [paper](https://pubmed.ncbi.nlm.nih.gov/29065595/) | - | [Kaggle link](https://www.kaggle.com/datasets/nourabentaher/cvc-300)| Public for research; no clear license |
+| CVC-ColonDB | [paper](https://pubmed.ncbi.nlm.nih.gov/26462083/) | - | [Kaggle link](https://www.kaggle.com/datasets/longvil/cvc-colondb)| Public for research; no clear license |
+| CVC-ClinicDB |[paper](https://www.sciencedirect.com/science/article/abs/pii/S0895611115000567) | [github](https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/CVC-ClinicDB.md) | [link](https://polyp.grand-challenge.org/CVCClinicDB/) | Public for research; no clear license |
+| ETIS-LaribPolypDB |[paper](https://pubmed.ncbi.nlm.nih.gov/24037504/)| - | - | Public for research; no clear license |
+| Kvasir SEG (HyperKvasir)| [paper](https://www.nature.com/articles/s41597-020-00622-y) | [github](https://github.com/DebeshJha/Kvasir-SEG)| [link](https://datasets.simula.no/hyper-kvasir/) | Public for research; no clear license |
+| PolypGen | [paper](https://www.nature.com/articles/s41597-023-01981-y) | [github](https://github.com/DebeshJha/PolypGen) | [link](https://www.synapse.org/Synapse:syn26376615/wiki/) | CC BY 4.0 |
+| LDPolypVideo | - | x | x | CC BY 4.0 |
+| REAL-COLON | [paper](https://www.nature.com/articles/s41597-024-03359-0) | - | [link](https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866) | CC BY 4.0 |
 
 **How the datasets are used & Data processing:**
 
