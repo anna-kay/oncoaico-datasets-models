@@ -34,6 +34,7 @@ To address these limitations, custom datasets were constructed:
     
 <br>
 
+**Composition of the Segmentation Dataset**
 | Dataset | Train | Validation | Test | Total |
 | :------------: | :------------: | :------------: | :------------: | :------------: |
 | Kvasir-SEG| 900 images | 100 | - | |
@@ -51,36 +52,36 @@ To address these limitations, custom datasets were constructed:
 - **Construction**:
 All samples from the Segmentation Dataset were utilized as positive instances (i.e., frames containing lesions) in the construction of the Mixed Dataset. Negative instances (i.e., frames without findings) were sourced from the REAL-Colon dataset as well as the older LDPolypVideo dataset. 
 
-- **Sampling from REAL-Colon dataset** 
-    
-    Out of the 60 available REAL-Colon videos, 14 were annotated as not containing any polyps (video_info.csv file, complementary to the REAL-Colon dataset). From these, eight videos were selected to extract negative frames for inclusion in the Mixed Dataset. The selection was guided by the goal of ensuring both variability and data quality. Specifically, the chosen videos: 
+- **Sampling from REAL-Colon dataset:**
+Out of the 60 available REAL-Colon videos, 14 were annotated as not containing any polyps (video_info.csv file, complementary to the REAL-Colon dataset). From these, eight videos were selected to extract negative frames for inclusion in the Mixed Dataset. The selection was guided by the goal of ensuring both variability and data quality. Specifically, the chosen videos: 
     
     - originate from different clinical centers (001-, 002-, 003-, 004-),  
     - include recordings from 4 male and 4 female patients,  
     - were acquired using two endoscope brands (5 Olympus and 3 Fujifilm), and  
     - were preprocessed to exclude initial frames containing non-informative content.  
     
-    In total, 2,034 frames were extracted from the selected REAL-Colon videos. These were randomly partitioned into training, validation, and test sets using a 70%–10%–20% split. This partitioning mirrors that of the Segmentation Dataset, ensuring a comparable distribution of positive and negative samples across all subsets of the Mixed Dataset. 
-    
-| video name | video info (age, sex, endoscope_brand, fps, num_frames, num_lesions, bbps) | start frame | end frame | sampling step | num of frames sampled |
-| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | 
-| 001-002 | (53, female, Olympus, 29.97, 26164, 0, 9)  | 2500 | 24001 | 100 | 216 |
-| 001-008 | (50, female, Olympus, 29.97, 35740, 0, 6)  | 2500 | 34001 | 100 | 316 |
-| 002-012 | (51, male, Fujifilm, 29.97, 34464, 0, 8)  | 2500 | 34001 | 100 | 316 |
-| 002-013 | (79, female, Fujifilm, 29.97, 24432, 0, 7)  | 2500 | 23001 | 100 | 206 |
-| 002-015 | (65, male, Fujifilm, 29.97, 20915, 0, 9)  | 2500 | 20001 | 100 | 176 |
-| 003-011 | (66, male, Olympus, 25, 63077, 0, 8.5)  | 2500 | 62001 | 200 | 298 |
-| 004-002 | (53, female, Olympus, 29.97, 34529, 0, 9)  | 2500 | 33001 | 100 | 306 |
-| 004-010 | (56, male, Olympus, 29.97, 24491, 0, 8)  | 2500 | 22501 | 100 | 200 |
+    In total, 2,034 frames were extracted from the selected REAL-Colon videos. These were randomly partitioned into training, validation, and test sets using a 70%–10%–20% split. This partitioning mirrors that of the Segmentation Dataset, ensuring a comparable distribution of positive and negative samples across all subsets of the Mixed Dataset.
+   
+    **Sampling REAL-Colon videos**    
+    | video name | video info (age, sex, endoscope_brand, fps, num_frames, num_lesions, bbps) | start frame | end frame | sampling step | num of frames sampled |
+    | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | 
+    | 001-002 | (53, female, Olympus, 29.97, 26164, 0, 9)  | 2500 | 24001 | 100 | 216 |
+    | 001-008 | (50, female, Olympus, 29.97, 35740, 0, 6)  | 2500 | 34001 | 100 | 316 |
+    | 002-012 | (51, male, Fujifilm, 29.97, 34464, 0, 8)  | 2500 | 34001 | 100 | 316 |
+    | 002-013 | (79, female, Fujifilm, 29.97, 24432, 0, 7)  | 2500 | 23001 | 100 | 206 |
+    | 002-015 | (65, male, Fujifilm, 29.97, 20915, 0, 9)  | 2500 | 20001 | 100 | 176 |
+    | 003-011 | (66, male, Olympus, 25, 63077, 0, 8.5)  | 2500 | 62001 | 200 | 298 |
+    | 004-002 | (53, female, Olympus, 29.97, 34529, 0, 9)  | 2500 | 33001 | 100 | 306 |
+    | 004-010 | (56, male, Olympus, 29.97, 24491, 0, 8)  | 2500 | 22501 | 100 | 200 |
 
-- **Sampling from LDPolypVideo dataset** 
-
+- **Sampling from LDPolypVideo dataset:** 
 All videos annotated as not containing polyps (0_1.avi, 0_61) were used to extract negative samples. From each video, 250 frames were systematically sampled, with sampling initiated from the first frame in every case. 
 
 In total, 2,042 frames were obtained from the LDPolypVideo dataset. These were randomly partitioned into training, validation, and test sets using a 70%–10%–20% split. This partitioning mirrors that of the Segmentation Dataset, ensuring a consistent distribution of positive and negative samples across all subsets of the Mixed Dataset. 
 
 <br>
 
+**Composition of the Mixed Dataset**
 | | Dataset | Train | Validation | Test | Total |
 | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | 
 | Positive | Segmentation Dataset| 2622 | 451 | 978 | 4051 |
